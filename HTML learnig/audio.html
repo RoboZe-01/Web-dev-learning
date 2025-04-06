@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <h1>Audio Player</h1>
+    <audio controls>
+        <!-- Assuming the MP3 file is in the same folder as this HTML file -->
+        <source src="The Road To Mordor - Ezra Lipp.mp3" type="audio/mpeg">
+        
+        <!-- Fallback for browsers that don't support the audio element -->
+        Your browser does not support the audio element.
+    </audio> 
+    
+    <!-- Optional: Add some styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</body>
+</html>
