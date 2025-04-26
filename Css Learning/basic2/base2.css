@@ -1,0 +1,18 @@
+div{
+
+    /* width and height  */
+
+    width: 100%;
+    max-width: 400px;
+    height: 80%;
+    background-color: bisque;
+
+    /* fonts  */
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: lighter;
+
+    /* border  */
+    border: 10px medium pink;
+}

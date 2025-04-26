@@ -5,12 +5,20 @@ h1{
     background-color: rgb(254, 5, 5);
 }
 
-
-
 div{
+    /* width and height */
+
     width: 100%;
     max-width: 400px;
-
     height: 80%;
-    background-color: rgb(28, 188, 228);
+    
+    /* fonts */
+
+    font-size: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+
+    /* border  */
+border: 5px solid pink;
+
 }
