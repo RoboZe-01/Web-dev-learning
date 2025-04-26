@@ -1,0 +1,19 @@
+#head1 {
+
+ width: 500px;
+ border: 8px solid pink;
+ background-color: beige;
+
+ /* adding padding  */
+padding: 10px 15px 10px 15px;
+margin: 10px 15px 10px 15px;
+
+
+
+
+
+    color: rebeccapurple;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200;
+  }
