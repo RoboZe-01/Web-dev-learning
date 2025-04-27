@@ -1,0 +1,30 @@
+.body{
+    background-color: rgb(248, 244, 209);
+}
+
+#head1{
+
+    padding-left: 45%;
+}
+.Paragraphs{
+    font-size: 50px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.tit{
+    color: blue;
+}
+
+ /* Media QUery */
+ 
+@media (max-width :480px) {
+
+    .tit{
+        font-size: 32px;
+    }
+    .Paragraphs{
+        font-size: 20px;
+    }
+}
