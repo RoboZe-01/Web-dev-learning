@@ -1,13 +1,13 @@
 #head1 {
 
  width: 500px;
- border: 8px solid pink;
+ border: 8px solid rgb(221, 0, 37);
  background-color: beige;
 
  /* adding padding  */
-padding: 10px 15px 10px 15px;
+padding: 50px;
 margin: 10px 15px 10px 15px;
-
+box-sizing: border-box;
 
 
 
