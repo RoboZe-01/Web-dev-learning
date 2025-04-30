@@ -1,0 +1,8 @@
+
+
+1.Creste a botton with text click
+2.Create 2 buttons with class and id
+3. Create a paragraph
+4.Add colors to two buttons
+5.Add proper html structure
+6.change page tittle
