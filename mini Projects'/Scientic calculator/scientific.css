@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background: #ffffff;
+    --text-color: #2c3e50;
+}
+
+[data-theme="dark"] {
+    --background: #2c3e50;
+    --text-color: #ecf0f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--background);
+    color: var(--text-color);
+    margin: 0;
+    padding: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.keypad-grid {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+}
+
+button {
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.panel {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.matrix-input-grid {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.matrix-input-grid input {
+    width: 60px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .keypad-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

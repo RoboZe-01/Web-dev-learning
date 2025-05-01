@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Assistant</title>
+    <link rel="stylesheet" href="scientific.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Display Area -->
+        <div class="display">
+            <div class="status-bar">
+                <span id="mode-indicator">COMP</span>
+                <span id="shift-indicator">SHIFT</span>
+            </div>
+            <div id="main-display" aria-live="polite">0</div>
+        </div>
+
+        <!-- Mode Selector -->
+        <div class="mode-buttons">
+            <button class="mode-btn" data-mode="basic">Basic</button>
+            <button class="mode-btn" data-mode="matrix">Matrix</button>
+            <button class="mode-btn" data-mode="graph">Graph</button>
+            <button class="mode-btn" data-mode="solve">Solve</button>
+        </div>
+
+        <!-- Main Keypad -->
+        <div class="keypad-grid">
+            <!-- Keys will be populated by JavaScript -->
+        </div>
+
+        <!-- Specialized Panels -->
+        <div class="panel matrix-panel hidden">
+            <div class="matrix-size-selector">
+                <input type="number" id="matrix-rows" min="1" max="6" value="2">
+                <span>x</span>
+                <input type="number" id="matrix-cols" min="1" max="6" value="2">
+            </div>
+            <div class="matrix-input-grid"></div>
+        </div>
+
+        <div class="panel graph-panel hidden">
+            <div id="graph-container"></div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <h3>History</h3>
+            <div class="history-list"></div>
+            <button id="undo-btn">Undo</button>
+            <button id="redo-btn">Redo</button>
+        </div>
+    </div>
+</body>
+</html>

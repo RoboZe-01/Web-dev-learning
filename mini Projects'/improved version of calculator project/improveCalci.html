@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Calculator</title>
+    <link rel="stylesheet" href="improveCalci.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="button-container">
+            <!-- Operators -->
+            <button class="btn operator" onclick="clearDisplay()">C</button>
+            <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+            <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+            <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+            
+            <!-- Numbers -->
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+            
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+            
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="btn" onclick="appendToDisplay('0')">0</button>
+            
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+        </div>
+    </div>
+
+    <script>
+        let currentDisplay = '';
+        const display = document.getElementById('display');
+
+        function appendToDisplay(value) {
+            currentDisplay += value;
+            display.value = currentDisplay;
+        }
+
+        function clearDisplay() {
+            currentDisplay = '';
+            display.value = currentDisplay;
+        }
+
+        function calculate() {
+            try {
+                currentDisplay = eval(currentDisplay).toString();
+                display.value = currentDisplay;
+            } catch (error) {
+                display.value = 'Error';
+                currentDisplay = '';
+            }
+        }
+    </script>
+</body>
+</html>
