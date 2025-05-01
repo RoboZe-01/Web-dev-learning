@@ -3,10 +3,34 @@
     border: 1px solid rgb(69, 67, 67);
     border-radius: 5px;
     width: 200px;
+    margin: 350px 350px 300px 350px;
 }
 
 #display{
 
     margin: 10px  ;
-    width: 100%;
+    width: 87%;
+    font-size: 25px;
+}
+
+/* button container  */
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+/* button class */
+
+.button{
+
+    width: 45px;
+    height: 45px;
+    margin: 3px;
+
+
 }
