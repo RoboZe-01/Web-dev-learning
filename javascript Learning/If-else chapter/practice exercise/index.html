@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro ticketing</title>
+</head>
+<body>
+    <script>
+        let age = 5;
+        let gender = 'male' // male and female
+        let finalDiscount;
+
+
+        if (age <=5){
+            finalDiscount=100
+        }else if(gender=== 'female' || 5<age && age<8){
+            finalDiscount = 50;
+        }else if (age>65){
+            finalDiscount=30;
+        }else if (gender==='male'){
+            finalDiscount=0
+        }
+        console.log(`Your final discount is ${finalDiscount} %`)
+
+
+
+    </script>
+    
+</body>
+</html>
