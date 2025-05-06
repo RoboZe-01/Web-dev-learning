@@ -79,7 +79,7 @@ class UIManager {
     switchMode(mode) {
         this.engine.currentMode = mode;
         document.querySelectorAll('.panel').forEach(panel => 
-            panel.classList.toggle('hidden', !panel.classList.contains(`${mode}-panel`))
+            panel.classList.toggle('hidden', !panel.classList.contains(`${mode}-panel`)))
     }
 
     updateDisplay() {
