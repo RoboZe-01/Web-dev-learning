@@ -9,88 +9,80 @@
 <body>
     <h1>Bat Ball stump Game</h1>
     <button onclick="
-    
-    generateComputorChoice()
-    
-
-  
-// Determining the game result assuming user chose bat 
-    let resultMsg ;
-    if (computerChoice ==='Ball'){
-        resultMsg=('User won');
-    }else if ( computerChoice==='Stump'){
-        resultMsg=('User loose');
-    }else if (computerChoice=== 'Bat'){
-        resultMsg= ('it is a draw');
-    }
-    alert(`You have chosen bat .Computer choice is ${computerChoice} and ${resultMsg}`);
+    let computerChoice= generateComputorChoice();
+    let resultMsg= getResult('Bat',computerChoice);
+    showResult('Bat',computerChoice,resultMsg);
     
     ">Bat</button>
-
-
-
-
-<!-- Making 'Ball' button clickable -->
     <button onclick="
-    
-
-    generateComputorChoice()
-
-  
-// Determining the game result assuming user chose bat 
-    
-    if (computerChoice ==='Ball'){
-        resultMsg=(`It's a tie`);
-    }else if ( computerChoice==='Stump'){
-        resultMsg=('User Wins');
-    }else if (computerChoice=== 'Bat'){
-        resultMsg= ('Computer wins');
-    }
-    alert(`You have chosen ball .Computer choice is ${computerChoice} and ${resultMsg}`);
-    
+     computerChoice= generateComputorChoice();
+     resultMsg= getResult('Ball',computerChoice);
+     showResult('Ball',computerChoice,resultMsg);
     ">Ball</button>
 
-
-
-    <!-- Making stump button  -->
-
     <button onclick="
-    
-
-   generateComputorChoice()
- 
-// Determining the game result assuming user chose bat 
-   
-   if (computerChoice ==='Ball'){
-       resultMsg=(`You loose`);
-   }else if ( computerChoice==='Stump'){
-       resultMsg=('Its a draw');
-   }else if (computerChoice=== 'Bat'){
-       resultMsg= ('Computer wins');
-   }
-   alert(`You have chosen Stump .Computer choice is ${computerChoice} and ${resultMsg}`);
-   
+    computerChoice= generateComputorChoice();
+     resultMsg= getResult('Stump',computerChoice)
+     showResult('Stump',computerChoice,resultMsg);
    ">Stump</button>
 
-   <!-- Improving the code using function  -->
    <script>
-    let computerChoice
+    
     // this will generate random number from 0-3
     function generateComputorChoice()
     
         {let randomNumber= Math.random()*3
             if (randomNumber>0 &&  randomNumber<=1){
             computerChoice = 'Bat';
-            // console.log('Computer choice is bat');
         } else if ( randomNumber> 1 && randomNumber<=2){
             computerChoice = 'Ball';
-            // console.log('Computer choice is ball');
         }else {
             computerChoice = 'Stump';
-        
-            // console.log('Computer choice is stump');
         }}
-    
+
+        // Function to get result 
+
+    function getResult(userMove, computerMove){
+
+        if( userMove==='Bat'){
+                    if (computerMove ==='Ball'){
+                 return 'User won';
+            }else if ( computerMove==='Stump'){
+                return 'Computer wins';
+            }else if (computerMove=== 'Bat'){
+                 return 'it is a draw';
+            }
+
+        }else if (userMove==='Ball'){
+            
+                if (computerMove ==='Ball'){
+                     return 'it is a draw';
+                }else if ( computerMove==='Stump'){
+                    return 'User won';
+                }else if (computerMove=== 'Bat'){
+                    return 'Computer wins';
+                }
+
+        }else if (userMove==='Stump'){
+                if (computerMove ==='Ball'){
+                return 'Computer wins';
+            }else if ( computerMove==='Stump'){
+                 return 'it is a draw' ;
+            }else if (computerMove=== 'Bat'){
+                return 'User won';
+            }
+
+        }
+
+        
+        
+    }
+
+    function showResult(userMove,computerMove,result){
+            alert(`You have chosen ${userMove}  .Computer choice is ${computerMove} and ${resultMsg}`);
+
+            
+        }
    </script>
 
 </body>
