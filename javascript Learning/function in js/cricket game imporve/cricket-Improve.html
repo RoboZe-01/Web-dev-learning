@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="improved.css">
+</head>
+<body>
+    <h1>Bat Ball stump Game</h1>
+    <button onclick="
+    
+    generateComputorChoice()
+    
+
+  
+// Determining the game result assuming user chose bat 
+    let resultMsg ;
+    if (computerChoice ==='Ball'){
+        resultMsg=('User won');
+    }else if ( computerChoice==='Stump'){
+        resultMsg=('User loose');
+    }else if (computerChoice=== 'Bat'){
+        resultMsg= ('it is a draw');
+    }
+    alert(`You have chosen bat .Computer choice is ${computerChoice} and ${resultMsg}`);
+    
+    ">Bat</button>
+
+
+
+
+<!-- Making 'Ball' button clickable -->
+    <button onclick="
+    
+
+    generateComputorChoice()
+
+  
+// Determining the game result assuming user chose bat 
+    
+    if (computerChoice ==='Ball'){
+        resultMsg=(`It's a tie`);
+    }else if ( computerChoice==='Stump'){
+        resultMsg=('User Wins');
+    }else if (computerChoice=== 'Bat'){
+        resultMsg= ('Computer wins');
+    }
+    alert(`You have chosen ball .Computer choice is ${computerChoice} and ${resultMsg}`);
+    
+    ">Ball</button>
+
+
+
+    <!-- Making stump button  -->
+
+    <button onclick="
+    
+
+   generateComputorChoice()
+ 
+// Determining the game result assuming user chose bat 
+   
+   if (computerChoice ==='Ball'){
+       resultMsg=(`You loose`);
+   }else if ( computerChoice==='Stump'){
+       resultMsg=('Its a draw');
+   }else if (computerChoice=== 'Bat'){
+       resultMsg= ('Computer wins');
+   }
+   alert(`You have chosen Stump .Computer choice is ${computerChoice} and ${resultMsg}`);
+   
+   ">Stump</button>
+
+   <!-- Improving the code using function  -->
+   <script>
+    let computerChoice
+    // this will generate random number from 0-3
+    function generateComputorChoice()
+    
+        {let randomNumber= Math.random()*3
+            if (randomNumber>0 &&  randomNumber<=1){
+            computerChoice = 'Bat';
+            // console.log('Computer choice is bat');
+        } else if ( randomNumber> 1 && randomNumber<=2){
+            computerChoice = 'Ball';
+            // console.log('Computer choice is ball');
+        }else {
+            computerChoice = 'Stump';
+        
+            // console.log('Computer choice is stump');
+        }}
+    
+   </script>
+
+</body>
+</html>
