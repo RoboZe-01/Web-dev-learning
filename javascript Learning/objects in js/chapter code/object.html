@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Object</title>
+    <link rel="stylesheet" href="object.css">
+</head>
+<body>
+<h1>Objects in js </h1>
+<hr>
+
+    <button class="toggle-btn" onclick="toggleInfo()">Learn more !!</button>
+    <div class="hidden-content">
+        ><p>An object in JavaScript is a data structure used to store multiple related values as key-value pairs.
+            Each key is a property name, and each value can be data (string, number, etc.) or a function (called a method).
+            
+            </p>
+    </div>
+
+    <script>
+        function toggleInfo(){
+            const content = document.querySelector('.hidden-content')
+            const button = document.querySelector('.toggle-btn')
+
+            // toggle visibility
+            content.style.display= content.style.display=== 'none'? 'block':'none';
+
+            // change button text 
+            button.textContent = content.style.display==='none'?'Learn More':'Show Less';
+        }
+
+
+
+
+
+    </script>
+
+
+<script>
+    let product ={
+        company : 'Mango',
+        price : 861,
+        item_name:'T-shirt',
+
+    };
+    console.log( product.company);
+    console.log( product.price);
+    console.log( product.item_name);
+    product.company='Banana';
+    console.log(product.company)
+</script>
+</body>
+</html>

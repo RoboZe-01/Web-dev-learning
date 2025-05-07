@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cricket</title>
-    <link rel="stylesheet" href="improved.css">
+    <title>improved cricket</title>
+    <link rel="stylesheet" href="cricket.css">
 </head>
 <body>
     <h1>Bat Ball stump Game</h1>
@@ -31,6 +31,22 @@
 
 
    <script>
+
+    // Counting the scores 
+
+    let score ={
+        Win :0,
+        Lost :0,
+        Tie:0,
+    }
+
+
+
+
+
+
+
+
     
     // this will generate random number from 0-3
     function generateComputorChoice() {
@@ -51,29 +67,38 @@
 
         if( userMove==='Bat'){
             if (computerMove ==='Ball'){
-                 return 'User won';
+                score.Win++
+                return 'User won';
                 }else if ( computerMove==='Stump'){
+                    score.Lost++
                     return 'Computer wins';
                 }else if (computerMove=== 'Bat'){
+                    score.Tie++
                     return 'it is a draw';
                 }
 
         }else if (userMove==='Ball'){
             
                 if (computerMove ==='Ball'){
+                    score.Tie++
                      return 'it is a draw';
                 }else if ( computerMove==='Stump'){
+                    score.Win++
                     return 'User won';
                 }else if (computerMove=== 'Bat'){
+                    score.Lost++
                     return 'Computer wins';
                 }
 
         }else {
                 if (computerMove ==='Ball'){
+                    score.Lost++
                 return 'Computer wins';
             }else if ( computerMove==='Stump'){
+                score.Tie++
                  return 'it is a draw' ;
             }else if (computerMove=== 'Bat'){
+                score.Win++
                 return 'User won';
             }
 
@@ -84,7 +109,15 @@
     }
 
     function showResult(userMove,computerMove,result){
-            alert(`You have chosen ${userMove}  .Computer choice is ${computerMove} and ${resultMsg}`);
+            alert(`You have chosen ${userMove}  .Computer choice is ${computerMove} 
+            
+            ${resultMsg} 
+
+            scores are; 
+            Win: ${score.Win}
+            lost: ${score.Lost}
+            Tie: ${score.Tie}`);
+            console.log(score)
 
             
         }

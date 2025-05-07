@@ -1,0 +1,18 @@
+/* Button style */
+.toggle-btn {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  /* Hidden content box */
+  .hidden-content {
+    display: none; /* Starts hidden */
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    margin-right: 50%;
+  }
