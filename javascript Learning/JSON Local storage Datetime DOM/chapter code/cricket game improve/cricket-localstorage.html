@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>improved cricket</title>
+    <link rel="stylesheet" href="cricket-local.css">
+</head>
+<body>
+    <h1>Bat Ball stump Game</h1>
+    <button onclick="
+    let computerChoice= generateComputorChoice();
+    let resultMsg= getResult('Bat',computerChoice);
+    showResult('Bat',computerChoice,resultMsg);
+    ">Bat</button>
+
+
+    <button onclick="
+     computerChoice= generateComputorChoice();
+     resultMsg= getResult('Ball',computerChoice);
+     showResult('Ball',computerChoice,resultMsg);
+    ">Ball</button>
+
+
+    <button onclick="
+    computerChoice= generateComputorChoice();
+     resultMsg= getResult('Stump',computerChoice)
+     showResult('Stump',computerChoice,resultMsg);
+   ">Stump</button>
+
+
+
+   <script>
+
+    // Counting the scores 
+
+    let score ={
+        Win :0,
+        Lost :0,
+        Tie:0,
+    }
+
+
+
+
+
+
+
+
+    
+    // this will generate random number from 0-3
+    function generateComputorChoice() {
+            
+        let randomNumber= Math.random()*3;
+        if (randomNumber>0 &&  randomNumber<=1){
+            return 'Bat';
+        } else if ( randomNumber> 1 && randomNumber<=2){
+            return 'Ball';
+        }else  {
+            return 'Stump';
+        }
+    }
+
+        // Function to get result 
+
+    function getResult(userMove, computerMove){
+
+        if( userMove==='Bat'){
+            if (computerMove ==='Ball'){
+                score.Win++
+                return 'User won';
+                }else if ( computerMove==='Stump'){
+                    score.Lost++
+                    return 'Computer wins';
+                }else if (computerMove=== 'Bat'){
+                    score.Tie++
+                    return 'it is a draw';
+                }
+
+        }else if (userMove==='Ball'){
+            
+                if (computerMove ==='Ball'){
+                    score.Tie++
+                     return 'it is a draw';
+                }else if ( computerMove==='Stump'){
+                    score.Win++
+                    return 'User won';
+                }else if (computerMove=== 'Bat'){
+                    score.Lost++
+                    return 'Computer wins';
+                }
+
+        }else {
+                if (computerMove ==='Ball'){
+                    score.Lost++
+                return 'Computer wins';
+            }else if ( computerMove==='Stump'){
+                score.Tie++
+                 return 'it is a draw' ;
+            }else if (computerMove=== 'Bat'){
+                score.Win++
+                return 'User won';
+            }
+
+        }
+
+        
+        
+    }
+
+    function showResult(userMove,computerMove,result){
+
+        localStorage.setItem('Score',JSON.stringify(score))
+        
+            alert(`You have chosen ${userMove}  .Computer choice is ${computerMove} 
+            
+            ${resultMsg} 
+
+            scores are; 
+            Win: ${score.Win}
+            lost: ${score.Lost}
+            Tie: ${score.Tie}`);
+            console.log(score)
+
+            
+        }
+   </script>
+
+</body>
+</html>

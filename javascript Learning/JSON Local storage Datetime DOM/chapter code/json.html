@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>json learning</title>
+    <link rel="stylesheet" href="json.css">
 </head>
 <body>
    <div> 
@@ -27,20 +28,50 @@
     <hr>
 
     <h1>Local starage </h1>
+    <h4>Things to know</h4>   
+    <div>
+         
+       <ol>
+        <li>Persistent, key-value string storage in the browser.</li>
+        <li>Requires JSON.stringify() for objects/arrays and JSON.parse() for retrieval..</li>
+        <li>Data is isolated per website origin (protocol, domain, port).</li>
+        <li>Has a limited storage capacity (around 5-10 MB).</li>
+        <li>Do not store any sensitive information here as it is publically viewables</li>
+       </ol>
+    </div>
+   
+    <div>
+        <h4>Methods in Local storage </h4>
+        <ul>
+            <li>setItem(key, value): Adds a key-value pair to local storage or updates the value if the key already exists.</li>
 
+            <li>getItem(key): Retrieves the value associated with a specific key from local storage, returning null if the key doesn't exist.</li>
+
+            <li>clear(): Empties all key-value pairs currently stored in the local storage for the origin.</li>
+
+            <li>removeItem(key): Removes the key-value pair associated with a given key from local storage</li>
+
+            <li>key(index): Returns the name (key) of the key at the specified zero-based index in the local storage.</li>
+
+            <li>length: Returns the number of key-value pairs currently stored in the local storage.</li>
+        </ul>
+    </div>
+    
+    
+    
     <script>
 
-    //     // js object 
+        // js object 
 
-    //     let product = {
-    //         name : 'Tshirt',
-    //         price : 757,
-    //         rating:{
-    //             stars :4.5,
-    //             noOfReviews :453,
-    //         },
+        let product = {
+            name : 'Tshirt',
+            price : 757,
+            rating:{
+                stars :4.5,
+                noOfReviews :453,
+            },
 
-    //     };
+        };
     //     console.log(typeof product);
     //     console.log(product);
 
@@ -59,7 +90,28 @@
 // NOw we are learning about local storage 
 
  localStorage.setItem('Name','KG coding');
+ localStorage.setItem('Price','755');
 
+//  printing elements from local storage 
+
+// console.log(localStorage.getItem('Name'))
+
+
+localStorage.setItem('Product',product);
+console.log(localStorage.getItem('Product'))
+
+localStorage.setItem('product',JSON.stringify(product));
+let product2 = JSON.parse(localStorage.getItem('product'));
+console.log(product2)
+
+
+
+// To remove items from localStorage
+localStorage.removeItem('Price');
+
+// To completely remove it 
+localStorage.clear();
     </script>
+    
 </body>
 </html>
