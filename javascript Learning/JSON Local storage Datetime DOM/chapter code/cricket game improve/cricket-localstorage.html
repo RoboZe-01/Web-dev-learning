@@ -25,23 +25,29 @@
       resultMsg = getResult('Stump', computerChoice);
       showResult('Stump', computerChoice, resultMsg);
     ">Stump</button>
+
+    <button onclick="localStorage.clear()
+    resetScore(scoreStr);
+    "
+    >Reset</button>
   
     <script>
-      let score;
-        let scoreStr = localStorage.getItem('Score');
-        if (scoreStr !==undefined){
-          score = JSON.parse(scoreStr);
 
-        }else {
-           score = {
+      let scoreStr = localStorage.getItem('Score');
+      let score;
+      resetScore();
+
+
+      function resetScore(scoreStr){
+       score = scoreStr? JSON.parse(scoreStr): {
         win: 0,
         lost: 0,
         tie: 0,
         
       };
+      }
+      
 
-
-        }
       
   score.displayScore= function() {
           return `No of matches Won:${score.win}, Lost:${score.lost}, Tie: ${score.tie}`;
@@ -103,6 +109,8 @@
         ${result}
         
         ${score.displayScore()}`);
+
+        // Made a json string to score 
         localStorage.setItem('Score',JSON.stringify(score))
       }
     </script>
