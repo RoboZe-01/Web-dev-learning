@@ -1,212 +1,107 @@
-/* cricket.css */
-body {
-    font-family: 'Comic Neue', cursive;
-    background: linear-gradient(135deg, #83eaf1, #63a4ff);
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-    color: #ff6b6b;
-    animation: bounce 1.5s infinite;
-    padding: 15px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border: 5px solid #ffd700;
-}
+    body {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        font-family: 'Comic Neue', cursive;
+        text-align: center;
+        padding: 20px;
+        min-height: 100vh;
+    }
 
-h1::after {
-    content: "🏏⚾🎮";
-    display: block;
-    font-size: 2rem;
-    margin-top: 10px;
-}
-
-.button-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-button {
-    padding: 25px 50px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    overflow: hidden;
-    min-width: 180px;
-    transform-style: preserve-3d;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 70%);
-    transform: translate(25%, 25%);
-}
-
-button:hover {
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-}
-
-button:active {
-    transform: translateY(0) scale(0.95);
-}
-
-button:nth-child(1) {
-    background: #ff4757;
-    border-bottom: 6px solid #ff6b81;
-}
-
-button:nth-child(1)::after {
-    content: "🦇";
-    margin-left: 10px;
-}
-
-button:nth-child(2) {
-    background: #ffd32a;
-    border-bottom: 6px solid #ffa801;
-}
-
-button:nth-child(2)::after {
-    content: "⚾";
-    margin-left: 10px;
-}
-
-button:nth-child(3) {
-    background: #2ed573;
-    border-bottom: 6px solid #7bed9f;
-}
-
-button:nth-child(3)::after {
-    content: "🎯";
-    margin-left: 10px;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Animated clouds */
-.cloud {
-    position: absolute;
-    background: white;
-    border-radius: 50px;
-    animation: float 20s infinite linear;
-    z-index: -1;
-}
-
-.cloud::before,
-.cloud::after {
-    content: '';
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-}
-
-.cloud::before {
-    width: 60px;
-    height: 60px;
-    top: -25px;
-    left: 20px;
-}
-
-.cloud::after {
-    width: 40px;
-    height: 40px;
-    top: -15px;
-    right: 20px;
-}
-
-@keyframes float {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(100vw); }
-}
-
-/* Add some clouds */
-body::after {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: -100px;
-    width: 100px;
-    height: 40px;
-    background: white;
-    border-radius: 50px;
-    animation: float 25s infinite linear;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 40%;
-    right: -100px;
-    width: 150px;
-    height: 60px;
-    background: white;
-    border-radius: 50px;
-    animation: float 30s infinite linear;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
-        margin: 1rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        font-size: 2.5em;
+        animation: bounce 1s infinite alternate;
     }
-    
-    .button-container {
-        flex-direction: column;
-    }
-    
+
     button {
-        width: 80%;
-        margin: 10px auto;
-        font-size: 1.4rem;
         padding: 20px 30px;
+        margin: 10px;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #fff;
+        color: #ff6b6b;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-}
 
-/* Confetti effect */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #ff6b6b;
-    animation: confetti 3s linear;
-    border-radius: 50%;
-}
+    button:hover {
+        transform: scale(1.1) rotate(3deg);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        background: #ffd93d;
+    }
 
-@keyframes confetti {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
-}
+    button:active {
+        transform: scale(0.95);
+    }
+
+    #score {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+        color: white;
+        font-size: 1.8em;
+        margin: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    @keyframes bounce {
+        from { transform: translateY(0); }
+        to { transform: translateY(-10px); }
+    }
+
+    @keyframes confetti {
+        0% { transform: translateY(0) rotate(0); }
+        100% { transform: translateY(-100vh) rotate(360deg); }
+    }
+
+    .celebration {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #ffd93d;
+        animation: confetti 2s linear forwards;
+    }
+
+    .win-effect {
+        animation: winPulse 0.5s ease;
+    }
+
+    @keyframes winPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    .result-emoji {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    /* Add media query for mobile responsiveness */
+    @media (max-width: 600px) {
+        button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+        }
+        
+        h1 {
+            font-size: 2em;
+        }
+    }

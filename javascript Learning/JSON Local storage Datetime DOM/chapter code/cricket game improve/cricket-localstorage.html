@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>improved cricket</title>
+    <link rel="stylesheet" href="cricket-local.css">
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
@@ -112,11 +113,64 @@
       
         localStorage.setItem('Score',JSON.stringify(score))
         
-        document.querySelector('#user-move').innerText = `You  have chosen ${userMove}`;
-        document.querySelector('#computer-move').innerText = `computer choice is ${computerMove}`;
-        document.querySelector('#result').innerText = result;
+        document.querySelector('#user-move').innerText = userMove !== undefined ?`You  have chosen ${userMove}` :'';
+
+        document.querySelector('#computer-move').    innerText = computerMove!== undefined ? `computer choice is ${computerMove}`:'';
+
+        document.querySelector('#result').innerText = result !== undefined ? result : '';
         document.querySelector('#score').innerText = score.displayScore();
       }
+
+
+
+
+
+     // Add emoji to buttons
+document.querySelectorAll('button').forEach((btn, index) => {
+    const emojis = ['🏏', '⚾', '🎯', '🔄'];
+    if(index < 4) btn.innerHTML += ' ' + emojis[index];
+});
+
+// Add celebration effect
+function createConfetti() {
+    const celebration = document.createElement('div');
+    celebration.className = 'celebration';
+    for(let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        celebration.appendChild(confetti);
+    }
+    document.body.appendChild(celebration);
+    setTimeout(() => celebration.remove(), 2000);
+}
+
+// Modify showResult function to add emojis and effects
+function showResult(userMove, computerMove, result) {
+    // ... existing code ...
+    
+    const resultElement = document.querySelector('#result');
+    if(result.includes('won')) {
+        resultElement.innerHTML = `${result} 🎉🏆`;
+        createConfetti();
+        resultElement.classList.add('win-effect');
+    } else if(result.includes('lost')) {
+        resultElement.innerHTML = `${result} 😢⚡`;
+    } else {
+        resultElement.innerHTML = `${result} 🤝✨`;
+    }
+    
+    setTimeout(() => resultElement.classList.remove('win-effect'), 500);
+    
+    // Add emoji to moves
+    const emojiMap = {Bat: '🏏', Ball: '⚾', Stump: '🎯'};
+    document.querySelector('#user-move').innerHTML = userMove ? 
+        `You chose ${emojiMap[userMove]} ${userMove}` : '';
+    document.querySelector('#computer-move').innerHTML = computerMove ? 
+        `Computer chose ${emojiMap[computerMove]} ${computerMove}` : '';
+}
     </script>
 
 </body>
