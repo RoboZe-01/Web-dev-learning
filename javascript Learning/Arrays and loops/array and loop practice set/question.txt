@@ -1,0 +1,4 @@
+
+1. Createa an array of numbers {5,6}, add 4 ata the beginning and 7 at end
+
+2.. create a method to return an element at a  particular position in the array 
