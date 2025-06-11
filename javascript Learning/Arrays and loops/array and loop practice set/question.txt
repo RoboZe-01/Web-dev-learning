@@ -2,3 +2,10 @@
 1. Createa an array of numbers {5,6}, add 4 ata the beginning and 7 at end
 
 2.. create a method to return an element at a  particular position in the array 
+
+3. Create an array copy using array slice method
+
+( slice method : it is like copying a small piece from the cake or somtg we have to specify starting and ending index
+)
+
+4. create a while loop that exist after counting 5 prime numbers
