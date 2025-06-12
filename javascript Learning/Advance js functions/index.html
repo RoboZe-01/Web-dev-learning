@@ -7,9 +7,52 @@
 </head>
 <body>
     <SCRipt>
-        function(num1,num2){
-            return num1 + num2
-        }
+
+
+    //    let sum  =  function(num1,num2){     // here we assigned function in the variable 
+    //         return num1 + num2
+    //     };
+    //     console.log(num(2,3));  // here we called the variable instead of the function
+
+
+    //     newSum = num;           // from here we can see that we can use that variable in other varible also so other varible can use this function as well
+    // let sumThreeNumbers= function(num1, num2,num3, sumTwoNumbers){
+    //     let sum1 = sumTwoNumbers(num1,num2);
+    //     return sumTwoNumbers(sum1,num3)
+    // }
+    // console.log(sumThreeNumbers(5,6,7,sum));
+
+    // //     console.log(newSum(8,5));
+
+
+
+    let sum = function(num1,num2){
+        return num1 + num2;
+    }
+    let sum2 = (num1,num2)=>{
+        return num1 + num2 ;
+    }
+
+
+  console.log(sum(2,3));
+  console.log(sum2(2,3));
+
+  // We can skip bracket if there is only single parameter used in function
+
+  let square = num =>{
+    return num**2 ;
+  }
+  console.log(square(8));
+
+
+   let square2 = num => num*num;
+
+   console.log(square2(8));
+
+
+
+
+
     </SCRipt>
 </body>
 </html>
