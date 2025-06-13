@@ -231,3 +231,106 @@ header {
     text-align: end;
     padding: 15px;
 }
+
+.item-container{
+
+    width: 80%;
+    
+    margin: 40px 10%;
+
+}
+.item-container{
+
+    width: 200px;
+
+
+}
+
+.item-image{
+    width: 100%;
+
+
+}
+
+.rating{
+
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.company-name{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(40, 44, 63);
+    margin-bottom: 6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.item-name{
+color: rgb(83, 87, 102);
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.price{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 15px;
+    color: rgb(40, 44, 63);
+    white-space: nowrap;
+}
+
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(40, 44, 63);
+}
+
+.original-price{
+        color: rgb(126, 129, 140);
+    font-weight: 400;
+    margin-left: 5px;
+    font-size: 12px;
+    text-decoration: line-through;
+
+}
+
+.discount{
+        color: rgb(255, 144, 90);
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+
+}
+
+.btn-add-bag{
+ margin-top: 5px;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+  border-width: 0px;
+  padding: 10px 16px;
+  background-color: rgb(255, 63, 108); /* Original pink/red color */
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+.btn-add-bag:hover{
+   background-color: rgb(230, 50, 90);
+  transform: scale(1.02);
+}
