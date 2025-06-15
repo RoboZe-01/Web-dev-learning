@@ -67,12 +67,15 @@ body{
     transition: 0.3s ease;
 
 }
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222;
     color: white;
 
 }
-.submit{
+.btn:disabled{
+    cursor:no-drop;
+}
+#next-btn{
     background:#001e4d;
     width: 150px;
     color:#fff;
@@ -89,4 +92,10 @@ body{
 .submit:hover{
     background: skyblue;
 
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
 }
