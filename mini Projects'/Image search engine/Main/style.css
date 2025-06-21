@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+.search-area{
+    background-image: url("images/boat.bg.jpg");
+    width: 100%;
+    height: 400px;
+    background-size: 100% 100%;
+    position: relative;
+
+}
+.black{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.027);
+    width: 100%;
+    height: 100%;
+}
+.content{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    gap: 20px;
+    
+
+}
+.content h1{
+    color: white;
+    font-size: 3vw;
+}
+.content p{
+    color: white;
+    font-size: 30px;
+}
+.search-bar{
+    width: 60%;
+    height: 15%;
+    background-color: white;
+    border-radius: 25px
+    ;
+    overflow: hidden;
+    display: flex;
+
+
+}
+
+.search-bar input{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+   
+    border: none;
+    outline: none;
+    font-size: 20px;
+
+}
+.btn{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+
+
+}
+.btn button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(9, 13, 117, 0.925);
+    border: none;
+    cursor: pointer ;
+    
+}
+.image-gallery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.image-gallery .images{
+    columns: 5 340px;
+    max-width: 95%;
+
+
+}
+.image{
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    
+    transition: 0.3s ease;
+}
+
+.image img:hover{
+
+    transform: scale(110%);
+
+}
