@@ -30,6 +30,7 @@ body{
     justify-content: space-between;
     padding: 26px 20px;
     border-radius: 10px;
+    position: relative;
     
 }
 
@@ -79,4 +80,25 @@ body{
     border-radius: 5px;
     cursor: pointer;
     
+}
+.copy-msg{
+    position: absolute;
+    right: 70px;
+    background: #019f55;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: none;
+
+}
+.copy-msg.show {
+    display: block;
+    animation: fadeOut 1.5s forwards;
+
+}
+
+@keyframes fadeOut{
+    0%{opacity: 1;}
+    100%{opacity: 0; display: none;}
 }
