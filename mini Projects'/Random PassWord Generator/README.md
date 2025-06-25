@@ -1,5 +1,8 @@
 # Random Password Generator
 
+![image](https://github.com/user-attachments/assets/12ece77c-63a3-46a5-86ff-e876e340a7b9)
+
+
 ## Overview
 A simple web tool that generates random passwords with one click.
 
@@ -36,4 +39,4 @@ Just open `index.html` in any browser - no installation needed!
 ---
 
 
-![image](https://github.com/user-attachments/assets/12ece77c-63a3-46a5-86ff-e876e340a7b9)
+
