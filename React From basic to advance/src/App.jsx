@@ -10,9 +10,6 @@ const App = () => {
   let changeUser =()=>{
     console.log(user)
 
-    user = "Rahul"
-    console.log(user)
-  }
   return (
     <div>
       <h1>User name is {user}</h1>
