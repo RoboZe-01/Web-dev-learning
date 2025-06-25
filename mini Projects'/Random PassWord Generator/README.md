@@ -35,4 +35,5 @@ Just open `index.html` in any browser - no installation needed!
 
 ---
 
-This keeps it simple while covering the essentials. The format is clean and scannable, perfect for a basic project. You can always expand it later if needed.
+
+![image](https://github.com/user-attachments/assets/12ece77c-63a3-46a5-86ff-e876e340a7b9)
