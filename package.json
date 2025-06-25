@@ -1,0 +1,23 @@
+{
+  "name": "web-dev-learning",
+  "version": "1.0.0",
+  "description": "Hi, I'm **RoboZe** – a tech enthusiast, AI explorer, and aspiring founder.  \r This is my personal roadmap to becoming a **full-stack developer**, building **AI-powered tools**, and launching **SaaS startups** that solve real-world problems.",
+  "main": "index.js",
+  "scripts": {
+     "dev": "vite",
+     "dev": "next dev",
+     "dev": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoboZe-01/Web-dev-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoboZe-01/Web-dev-learning/issues"
+  },
+  "homepage": "https://github.com/RoboZe-01/Web-dev-learning#readme"
+}
