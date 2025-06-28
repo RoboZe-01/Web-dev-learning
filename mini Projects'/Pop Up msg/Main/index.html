@@ -6,9 +6,19 @@
     <title>Pop Up msg </title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <button>Click Me</button>
+    <body>
+        <div class="container">
+            <button type="submit" class="btn" onclick="openPopup()">submit</button>
+
+         <div class="pop-up" id="pop-up">
+            <img src="Images/404-tick.png" alt="">
+            <h2>Thank you !! </h2>
+            <p>You details has be successfully submitted . Thanks !</p>
+            <button type="button" onclick="closePopup()">Close</button>
+         </div>
+
+    </div>
+   
 
 
     <script src="script.js"></script>
