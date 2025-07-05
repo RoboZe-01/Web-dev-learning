@@ -1,16 +1,16 @@
+
 import React from 'react'
 
 const App = () => {
-  let  name = 'Prem'
-  
-  
+  let name = "Prem";
+  const changeName = () => {
+    name = "Rahul";
 
   return (
     <div>
-      <div>Hello {name}</div>
-      <button>Change user</button>
+     <h1>UserName is {name}</h1>
     </div>
   )
 }
-
+}
 export default App
