@@ -1,28 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const App = () => {
-
-const [Num, setNum] = useState(0)
-
-
-
-const changeA =()=> {
-  console.log("Chal gya")
-  setA(20)
-}
+  let  name = 'Prem'
+  
+  
 
   return (
     <div>
- <h2>Number is {Num}</h2>
- <button onClick={function(){
-  setNum(Num + 10)
-
-
-
- }}>Increment</button>
- <button onClick={()=>{
-  setNum(Num-10)
- }}>decrement</button>
+      <div>Hello {name}</div>
+      <button>Change user</button>
     </div>
   )
 }
