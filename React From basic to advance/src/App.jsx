@@ -11,8 +11,9 @@ const [first, setfirst] = useState(second)
 
   return (
     <div>
-     <h1>UserName is {name}</h1>
-     <button onClick={changeName}>Change USer</button>
+    <form action="">
+      <input type="text" placeholder='Enter Your Name'/>
+    </form>
     </div>
   )
 }
