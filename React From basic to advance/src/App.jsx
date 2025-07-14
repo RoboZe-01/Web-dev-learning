@@ -1,19 +1,10 @@
-
-import React from 'react'
+import Hooks from './Components/Hooks.jsx'
 
 const App = () => {
-  let name = "Prem";
-
-    
-  const changeName = () => {
-const [first, setfirst] = useState(second)
-  }
-
   return (
     <div>
-    <form action="">
-      <input type="text" placeholder='Enter Your Name'/>
-    </form>
+      <Hooks/>
+      <h1>Hooks here</h1>
     </div>
   )
 }
